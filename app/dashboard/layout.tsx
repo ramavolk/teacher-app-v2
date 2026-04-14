@@ -25,7 +25,7 @@ export default function DashboardLayout({
   }, [router]);
 
   if (!isAuthenticated) {
-    return <div className="p-8 text-center">Загрузка...</div>;
+    return <div className="min-h-screen bg-gray-50 flex items-center justify-center">Загрузка...</div>;
   }
 
   return <>{children}</>;
