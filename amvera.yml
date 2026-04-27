@@ -1,0 +1,21 @@
+meta:
+  environment: node
+  toolchain:
+    name: npm
+    version: 20
+
+build:
+  artifacts:
+    ".next": "/.next"
+    "public": "/public"
+    "package.json": "/package.json"
+    "node_modules": "/node_modules"
+    "prisma": "/prisma"
+  additionalCommands:
+    - npm install
+    - npm run build
+
+run:
+  scriptName: node_modules/next/dist/bin/next
+  scriptArguments: start
+  persistenceMount: /data
