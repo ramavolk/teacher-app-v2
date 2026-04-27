@@ -14,6 +14,7 @@ build:
   additionalCommands:
     - npm install
     - npm run build
+    - npx prisma generate
 
 run:
   scriptName: node_modules/next/dist/bin/next
